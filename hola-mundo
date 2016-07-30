@@ -1,0 +1,16 @@
+;---------------------------Segmento de datos----------------
+;-------------se declaran constantes------------------------
+section .data
+	cons_hola: db 'Hola mundo!',0xa
+	cons_tamano: equ $-cons_hola
+;------------------segmento de codigo-----------------------
+section .text
+	global_start
+_start
+	mov rax,1
+	mov rdi,1
+	mov rsi,cons_hola
+	mov rx, cons_tamano
+	syscall
+
+
